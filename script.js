@@ -28,6 +28,7 @@ navButtons.forEach((button, index) => {
     dropdowns.forEach((dropdown, i) => {
       if (i !== index) {
         dropdown.style.display = "none";
+        navButtons[i].classList.remove("link-open");
         navButtons[i].querySelector("img").src =
           "./assets/images/icon-arrow-down.svg";
       }
@@ -38,9 +39,11 @@ navButtons.forEach((button, index) => {
 
     if (current.style.display === "block") {
       current.style.display = "none";
+      button.classList.remove("link-open");
       arrow.src = "./assets/images/icon-arrow-down.svg";
     } else {
       current.style.display = "block";
+      button.classList.add("link-open");
       arrow.src = "./assets/images/icon-arrow-up.svg";
     }
   });
@@ -53,6 +56,7 @@ dropdowns.forEach((dropdown) => {
 document.addEventListener("click", () => {
   dropdowns.forEach((dropdown, index) => {
     dropdown.style.display = "none";
+    navButtons[index].classList.remove("link-open");
     navButtons[index].querySelector("img").src =
       "./assets/images/icon-arrow-down.svg";
   });

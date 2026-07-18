@@ -249,9 +249,10 @@
     }
   
     .overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
   
     .close-menu {
       display: block;
