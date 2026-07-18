@@ -1,3 +1,23 @@
+const nav = document.querySelector("nav");
+const overlay = document.querySelector(".overlay");
+const openMenu = document.querySelector(".open-menu");
+const closeMenu = document.querySelector(".close-menu");
+
+openMenu.addEventListener("click", () => {
+  nav.classList.add("active");
+  overlay.classList.add("active");
+});
+
+closeMenu.addEventListener("click", () => {
+  nav.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+overlay.addEventListener("click", () => {
+  nav.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
 const navButtons = document.querySelectorAll(".nav-link");
 const dropdowns = document.querySelectorAll(".dropdown-list");
 
@@ -8,30 +28,32 @@ navButtons.forEach((button, index) => {
     dropdowns.forEach((dropdown, i) => {
       if (i !== index) {
         dropdown.style.display = "none";
-
-        const img = navButtons[i].querySelector("img");
-        img.src = "./assets/images/icon-arrow-down.svg";
+        navButtons[i].querySelector("img").src =
+          "./assets/images/icon-arrow-down.svg";
       }
     });
 
-    const currentDropdown = dropdowns[index];
-    const currentArrow = button.querySelector("img");
+    const current = dropdowns[index];
+    const arrow = button.querySelector("img");
 
-    if (currentDropdown.style.display === "block") {
-      currentDropdown.style.display = "none";
-      currentArrow.src = "./assets/images/icon-arrow-down.svg";
+    if (current.style.display === "block") {
+      current.style.display = "none";
+      arrow.src = "./assets/images/icon-arrow-down.svg";
     } else {
-      currentDropdown.style.display = "block";
-      currentArrow.src = "./assets/images/icon-arrow-up.svg";
+      current.style.display = "block";
+      arrow.src = "./assets/images/icon-arrow-up.svg";
     }
   });
+});
+
+dropdowns.forEach((dropdown) => {
+  dropdown.addEventListener("click", (e) => e.stopPropagation());
 });
 
 document.addEventListener("click", () => {
   dropdowns.forEach((dropdown, index) => {
     dropdown.style.display = "none";
-
-    const img = navButtons[index].querySelector("img");
-    img.src = "./assets/images/icon-arrow-down.svg";
+    navButtons[index].querySelector("img").src =
+      "./assets/images/icon-arrow-down.svg";
   });
 });
