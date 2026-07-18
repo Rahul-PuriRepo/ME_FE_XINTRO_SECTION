@@ -86,13 +86,15 @@
   .dropdown-list {
     position: absolute;
     top: 45px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: white;
     border-radius: 10px;
     padding: 18px;
-    box-shadow: 0 10px 35px rgba(0,0,0,.15);
-    display: none;
     min-width: 170px;
+    display: none;
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    z-index: 100;
   }
   
   .dropdown-link {
