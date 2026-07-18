@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+  }
+  
+  a {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+  }
+  
+  button {
+    cursor: pointer;
+    font: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* ---------- Header ---------- */
+  
+  header {
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 50px;
+  }
+  
+  .logo {
+    width: 84px;
+  }
+  
+  .open-menu,
+  .close-menu,
+  .overlay {
+    display: none;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .navigation {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+  }
+  
+  .navigation > li {
+    position: relative;
+  }
+  
+  .nav-link,
+  .navigation a {
+    background: transparent;
+    border: none;
+    color: hsl(0, 0%, 41%);
+    font-size: 15px;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .navigation a:hover,
+  .nav-link:hover,
+  .registration button:hover {
+    color: hsl(0, 0%, 8%);
+  }
+  
+  /* ---------- Dropdown ---------- */
+  
+  .dropdown-list {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.15);
+    display: none;
+    min-width: 170px;
+  }
+  
+  .dropdown-link {
+    margin: 10px 0;
+  }
+  
+  .dropdown-link a {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  /* ---------- Registration ---------- */
+  
+  .registration {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .registration button {
+    background: transparent;
+    border: none;
+    color: hsl(0,0%,41%);
+  }
+  
+  .registration button:last-child {
+    border: 2px solid hsl(0,0%,41%);
+    border-radius: 12px;
+    padding: 12px 24px;
+  }
+  
+  /* ---------- Main ---------- */
+  
+  main {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 0 40px;
+  }
+  
+  picture {
+    order: 2;
+    flex: 1;
+  }
+  
+  picture img {
+    width: 100%;
+  }
+  
+  .text-content {
+    flex: 1;
+  }
+  
+  .text-content h1 {
+    font-size: 72px;
+    line-height: .95;
+    margin-bottom: 50px;
+  }
+  
+  .text-content p {
+    color: hsl(0,0%,41%);
+    line-height: 1.6;
+    max-width: 430px;
+    margin-bottom: 45px;
+  }
+  
+  .text-content button {
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 18px 34px;
+    font-weight: bold;
+    margin-bottom: 90px;
+  }
+  
+  .text-content button:hover {
+    background: white;
+    color: black;
+    border: 2px solid black;
+  }
+  
+  .clients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .clients img {
+    max-height: 25px;
+  }
+  
+  /* ---------- Footer ---------- */
+  
+  .attribution {
+    text-align: center;
+    margin: 60px 0;
+    font-size: 14px;
+  }
+  
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
